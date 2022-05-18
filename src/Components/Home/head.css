@@ -1,0 +1,574 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@900&display=swap");
+.closeS {
+  display: none;
+}
+.openS {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 10%);
+  z-index: 1;
+  padding: 20px;
+  background-color: rgb(18, 17, 23, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+}
+.openS h2 {
+  font-family: "Jost", sans-serif;
+  font-size: 30px;
+  margin-bottom: 0;
+}
+.openS p {
+  font-size: 18px;
+  color: #8e8e8e;
+}
+.openS input {
+  padding: 10px;
+  width: 80%;
+  border: 1px solid #8e8e8e;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.openS button {
+  margin-left: 30px;
+  border: 2px solid #f9f9f9;
+  padding: 10px 40px;
+  border-radius: 25px;
+  color: #f9f9f9;
+  background: #121117e6;
+  cursor: pointer;
+}
+.openS button:hover {
+  background-color: #57048a;
+  border: 2px solid #57048a;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.close {
+  display: none !important;
+}
+.open {
+  display: block !important;
+}
+.container {
+  width: 85%;
+  padding: 10px;
+  margin: auto;
+}
+.container .head {
+  margin-bottom: 20px;
+}
+.container .head .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.container .head .navbar div.logo img {
+  width: 100%;
+  vertical-align: middle;
+}
+.container .head .navbar div.nav-links ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.container .head .navbar div.nav-links ul li {
+  margin-left: 20px;
+}
+.container .head .navbar div.nav-links ul li:first-of-type {
+  margin-left: 0px;
+}
+.container .head .navbar div.nav-links ul li a {
+  color: #f9f9f9;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.container .head .navbar div.nav-icons svg {
+  color: #fff;
+  height: 1.1rem;
+  width: 1.1rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.container .head .navbar div.nav-icons svg.menu {
+  margin-left: 20px;
+  display: none;
+}
+.container .head .navbar div.nav-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .head .navbar div.nav-icons a {
+  margin-left: 30px;
+  border: 2px solid #f9f9f9;
+  padding: 10px 40px;
+  border-radius: 25px;
+  color: #f9f9f9;
+  vertical-align: middle;
+}
+.container .head .navbar div.nav-icons a:hover {
+  background-color: #57048a;
+  border: 2px solid #57048a;
+}
+.container .head .navbar div.nav-icons a svg {
+  margin-right: 10px;
+  vertical-align: middle;
+  color: #fff;
+  background: transparent none repeat scroll 0 0;
+}
+.container .head .navbar div.nav-icons a span {
+  display: inline;
+}
+.container .head .title {
+  padding: 50px;
+}
+.container .head .title h2 {
+  font-size: 60px;
+  width: 50%;
+  line-height: 1.6;
+  font-weight: bolder;
+  font-family: "Jost", sans-serif;
+  margin-bottom: 0px;
+}
+.container .head .title p {
+  color: #8e8e8e;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+.container .head .title a {
+  margin-left: 30px;
+  border: 2px solid #f9f9f9;
+  padding: 10px 40px;
+  border-radius: 25px;
+  color: #f9f9f9;
+  vertical-align: middle;
+}
+.container .head .title a:hover {
+  background-color: #57048a;
+  border: 2px solid #57048a;
+}
+.container .head .title a svg {
+  vertical-align: middle;
+}
+.container .head .title a span {
+  margin-left: 10px;
+}
+
+/* Start Media Query */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+    margin: auto;
+  }
+
+  .container .head .navbar div.logo img {
+    width: 100%;
+    vertical-align: middle;
+  }
+  .container .head .navbar div.nav-icons a {
+    padding: 2px 15px;
+    border-radius: 15px;
+  }
+  .container .head .navbar div.nav-icons a span {
+    display: none;
+  }
+  .container .head .navbar div.nav-icons a svg {
+    margin-right: 0px;
+  }
+  .container .head .navbar div.nav-icons svg.menu {
+    margin-left: 20px;
+    display: block;
+  }
+  .container .head .navbar div.nav-links {
+    display: none;
+  }
+  .close {
+    display: none !important;
+  }
+  .container .head .navbar div.nav-links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 10%);
+    background: rgb(18, 17, 23, 0.8);
+    z-index: 1;
+  }
+  .container .head .navbar div.nav-links ul li {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .container .head .title h2 {
+    font-size: 45px;
+    width: 100%;
+    line-height: 1.6;
+    font-weight: bolder;
+    font-family: "Jost", sans-serif;
+    margin-bottom: 0px;
+  }
+  .container .head .title a {
+    margin-left: 30px;
+    border: 2px solid #f9f9f9;
+    padding: 10px 25px;
+    border-radius: 25px;
+    color: #f9f9f9;
+    vertical-align: middle;
+  }
+  .container .head .title {
+    padding: 10px;
+  }
+  .openS {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 10%);
+    z-index: 1;
+    padding: 0px;
+    background-color: rgb(18, 17, 23, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+    margin: auto;
+  }
+  .container .head .navbar div.logo img {
+    width: 90%;
+    vertical-align: middle;
+  }
+  .container .head .navbar div.nav-icons a {
+    padding: 2px 15px;
+    border-radius: 15px;
+  }
+  .container .head .navbar div.nav-icons a span {
+    display: none;
+  }
+  .container .head .navbar div.nav-icons a svg {
+    margin-right: 0px;
+  }
+  .container .head .navbar div.nav-icons svg.menu {
+    margin-left: 20px;
+    display: block;
+  }
+  .close {
+    display: none !important;
+  }
+  .container .head .navbar div.nav-links {
+    display: none;
+  }
+  .container .head .navbar div.nav-links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 10%);
+    background: rgb(18, 17, 23, 0.8);
+    z-index: 1;
+  }
+  .container .head .navbar div.nav-links ul li {
+    margin-bottom: 20px;
+  }
+  .container .head .title h2 {
+    font-size: 40px;
+    width: 80%;
+    line-height: 1.6;
+    font-weight: bolder;
+    font-family: "Jost", sans-serif;
+    margin-bottom: 0px;
+  }
+  .container .head .title a {
+    margin-left: 30px;
+    border: 2px solid #f9f9f9;
+    padding: 10px 40px;
+    border-radius: 25px;
+    color: #f9f9f9;
+    vertical-align: middle;
+  }
+  .container .head .title {
+    padding: 20px;
+  }
+  .openS {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 10%);
+    z-index: 1;
+    padding: 20px;
+    background-color: rgb(18, 17, 23, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+    margin: auto;
+  }
+  .container .head .navbar div.logo img {
+    width: 80%;
+    vertical-align: middle;
+  }
+  .container .head .navbar div.nav-icons a {
+    padding: 5px 15px;
+    border-radius: 25px;
+  }
+  .container .head .navbar div.nav-icons a span {
+    display: inline;
+  }
+  .container .head .navbar div.nav-icons a svg {
+    margin-right: 10px;
+  }
+  .container .head .navbar div.nav-icons svg.menu {
+    margin-left: 20px;
+    display: none;
+  }
+  .container .head .navbar div.nav-links {
+    display: block;
+  }
+  .close {
+    display: block !important;
+  }
+  .container .head .navbar div.nav-links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+  }
+  .container .head .navbar div.nav-links ul li {
+    margin-bottom: 0px;
+  }
+  .container .head .title h2 {
+    font-size: 50px;
+    width: 75%;
+    line-height: 1.6;
+    font-weight: bolder;
+    font-family: "Jost", sans-serif;
+    margin-bottom: 0px;
+  }
+  .container .head .title a {
+    margin-left: 30px;
+    border: 2px solid #f9f9f9;
+    padding: 10px 40px;
+    border-radius: 25px;
+    color: #f9f9f9;
+    vertical-align: middle;
+  }
+  .container .head .title {
+    padding: 50px;
+  }
+  .openS {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 10%);
+    z-index: 1;
+    padding: 20px;
+    background-color: rgb(18, 17, 23, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+  }
+  .container .head .navbar div.logo img {
+    width: 100%;
+    vertical-align: middle;
+  }
+  .container .head .navbar div.nav-icons a {
+    padding: 10px 40px;
+    border-radius: 25px;
+  }
+  .container .head .navbar div.nav-icons a span {
+    display: inline;
+  }
+  .container .head .navbar div.nav-icons a svg {
+    margin-right: 10px;
+  }
+  .container .head .navbar div.nav-icons svg.menu {
+    margin-left: 20px;
+    display: none;
+  }
+  .container .head .navbar div.nav-links {
+    display: block;
+  }
+  .close {
+    display: block !important;
+  }
+  .container .head .navbar div.nav-links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+  }
+  .container .head .navbar div.nav-links ul li {
+    margin-bottom: 0px;
+  }
+  .container .head .title h2 {
+    font-size: 50px;
+    width: 70%;
+    line-height: 1.6;
+    font-weight: bolder;
+    font-family: "Jost", sans-serif;
+    margin-bottom: 0px;
+  }
+  .container .head .title a {
+    margin-left: 30px;
+    border: 2px solid #f9f9f9;
+    padding: 10px 40px;
+    border-radius: 25px;
+    color: #f9f9f9;
+    vertical-align: middle;
+  }
+  .container .head .title {
+    padding: 50px;
+  }
+  .openS {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 10%);
+    z-index: 1;
+    padding: 20px;
+    background-color: rgb(18, 17, 23, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+    margin: auto;
+  }
+  .container .head .navbar {
+    width: 90%;
+    margin: auto;
+  }
+  .container .head .navbar div.logo img {
+    width: 100%;
+    vertical-align: middle;
+  }
+  .container .head .navbar div.nav-icons a {
+    padding: 10px 40px;
+    border-radius: 25px;
+  }
+  .container .head .navbar div.nav-icons a span {
+    display: inline;
+  }
+  .container .head .navbar div.nav-icons a svg {
+    margin-right: 10px;
+  }
+  .container .head .navbar div.nav-icons svg.menu {
+    margin-left: 20px;
+    display: none;
+  }
+  .container .head .navbar div.nav-links {
+    display: block;
+  }
+  .close {
+    display: block !important;
+  }
+  .container .head .navbar div.nav-links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+  }
+  .container .head .navbar div.nav-links ul li {
+    margin-bottom: 0px;
+  }
+  .container .head .title h2 {
+    font-size: 60px;
+    width: 50%;
+    line-height: 1.6;
+    font-weight: bolder;
+    font-family: "Jost", sans-serif;
+    margin-bottom: 0px;
+  }
+  .container .head .title a {
+    margin-left: 30px;
+    border: 2px solid #f9f9f9;
+    padding: 10px 40px;
+    border-radius: 25px;
+    color: #f9f9f9;
+    vertical-align: middle;
+  }
+  .container .head .title {
+    padding: 50px;
+  }
+  .openS {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 10%);
+    z-index: 1;
+    padding: 20px;
+    background-color: rgb(18, 17, 23, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+  }
+}

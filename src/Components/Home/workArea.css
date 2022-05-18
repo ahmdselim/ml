@@ -1,0 +1,125 @@
+.container .work-area {
+  width: 85%;
+  margin: auto;
+}
+.container .work-area ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container .work-area ul li {
+  max-width: 24%;
+  margin-left: 1%;
+  flex-basis: 25%;
+}
+.container .work-area ul li svg {
+  color: #4a1fc8 !important;
+  width: 55px;
+  height: 55px;
+}
+.container .work-area ul li:first-of-type {
+  margin-left: 0%;
+}
+.container .work-area ul li p {
+  color: #8e8e8e;
+  line-height: 1.8;
+}
+
+/* Start Media Query */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container .work-area {
+    width: 100%;
+    margin: auto;
+  }
+  .container .work-area ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .container .work-area ul li {
+    max-width: 100%;
+    margin-left: 0%;
+    flex-basis: 100%;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .container .work-area {
+    width: 100%;
+    margin: auto;
+  }
+  .container .work-area ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .container .work-area ul li {
+    max-width: 49%;
+    margin-left: 1%;
+    flex-basis: 50%;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .container .work-area {
+    width: 95%;
+    margin: auto;
+  }
+  .container .work-area ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .container .work-area ul li {
+    max-width: 32.33%;
+    margin-left: 1%;
+    flex-basis: 33.33%;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container .work-area ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .container .work-area ul li {
+    max-width: 24%;
+    margin-left: 1%;
+    flex-basis: 25%;
+  }
+  .container .work-area {
+    width: 90%;
+    margin: auto;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container .work-area ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .container .work-area ul li {
+    max-width: 24%;
+    margin-left: 1%;
+    flex-basis: 25%;
+  }
+  .container .work-area {
+    width: 85%;
+    margin: auto;
+  }
+}

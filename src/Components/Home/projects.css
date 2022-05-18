@@ -1,0 +1,116 @@
+a.addCart {
+  display: block;
+  margin-top: 20px;
+  border: 2px solid #f9f9f9;
+  padding: 10px 50px;
+  border-radius: 25px;
+  color: #f9f9f9;
+  cursor: pointer;
+}
+a.addCart:hover {
+  background-color: #57048a;
+  border: 2px solid #57048a;
+}
+a.addCart svg {
+  vertical-align: middle;
+}
+a.addCart span {
+  display: inline;
+}
+.projects,
+.sales {
+  width: 80%;
+}
+.mySwiper .swiper-wrapper .swiper-slide {
+  width: 280px !important;
+}
+.mySwiper .swiper-wrapper .swiper-slide:hover {
+  transform: translate(0px, -10px);
+  transition: all 0.4s ease-in-out;
+}
+.mySwiper .swiper-wrapper .swiper-slide div {
+  padding: 30px;
+  background-color: #16151a;
+  border: 1px solid #16151a;
+  border-radius: 8px;
+}
+.mySwiper .swiper-wrapper .swiper-slide .project-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mySwiper .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  border-radius: 8px;
+}
+.mySwiper .swiper-wrapper .swiper-slide img.avater {
+  width: 30px;
+  border-radius: 25px;
+  vertical-align: middle;
+}
+.mySwiper .swiper-wrapper .swiper-slide img.avaterS {
+  width: 50px;
+  border-radius: 60px;
+  vertical-align: middle;
+}
+.mySwiper .swiper-wrapper .swiper-slide span {
+  margin-left: 15px;
+}
+/* Start Media Query */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .projects,
+  .sales {
+    width: 100%;
+    margin: 50px auto;
+  }
+  .projects {
+    margin-top: 0;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .projects,
+  .sales {
+    width: 100%;
+    margin: 50px auto;
+  }
+  .projects {
+    margin-top: 0;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .projects,
+  .sales {
+    width: 95%;
+    margin: 50px auto;
+  }
+  .projects {
+    margin-top: 0;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .projects,
+  .sales {
+    width: 90%;
+    margin: 50px auto;
+  }
+  .projects {
+    margin-top: 0;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .projects,
+  .sales {
+    width: 85%;
+    margin: 50px auto;
+  }
+  .projects {
+    margin-top: 0;
+  }
+}
