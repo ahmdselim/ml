@@ -1,46 +1,40 @@
 import React from "react";
-import logo from "../images/logo.png";
-import "./footer.css";
+import { Link } from "react-router-dom";
+import logo from "../images/logo1.png";
 
 const Footer = () => {
   return (
     <section className="footer">
       <div className="content">
         <div>
-          <img src={logo} alt="logo" />
+          <img
+            src={logo}
+            style={{ width: "35px", borderRadius: "25px" }}
+            alt="logo"
+          />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis non,
-            fugit totam vel laboriosam vitae.
+            The largest platform for buying and selling projects in the
+            Sultanate of Oman. Our goal is to re-create opportunities for
+            entrepreneurs and business owners in the field of entrepreneurship
+            and provide them with the opportunity to invest and enter the world
+            of entrepreneurship and the prosperity of the economy in the
+            Sultanate.
           </p>
         </div>
         <div>
-          <h3>Useful Links</h3>
+          <h3>About B4S</h3>
           <ul>
             <li>
-              <a href="">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="">Explore</a>
+              <Link to="/categories">Categories</Link>
             </li>
             <li>
-              <a href="">Activity</a>
+              <Link to="/projects">Projects</Link>
             </li>
             <li>
-              <a href="">Privacy & Terms</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3>Community</h3>
-          <ul>
-            <li>
-              <a href="">Help Center</a>
-            </li>
-            <li>
-              <a href="">Partners</a>
-            </li>
-            <li>
-              <a href="">Blog</a>
+              <Link to="/addProject">New Ad</Link>
             </li>
           </ul>
         </div>

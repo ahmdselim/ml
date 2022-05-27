@@ -1,15 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap");
 body {
   margin: 0;
   padding: 0;
-  background-color: #121117;
-  color: #f9f9f9;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #070708;
+  font-family: "Tajawal", sans-serif !important;
   font-size: 16px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+*,
+input,
+textarea,
+button,
+select {
+  font-family: "Tajawal", sans-serif;
+  /* direction: rtl; */
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

@@ -5,7 +5,6 @@ import {
   IoBagOutline,
   IoTrendingUpOutline,
 } from "react-icons/io5";
-import "./workArea.css";
 const Work = () => {
   return (
     <div className="work-area">

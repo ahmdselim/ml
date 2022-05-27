@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+.container .login {
+  width: 85%;
+  margin: 50px auto;
+}
+.container .login h2 {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  text-align: center;
+}
+.container .login p {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #464444;
+  line-height: 1.7;
+  word-wrap: break-word;
+  font-family: "Poppins", sans-serif;
+  width: 45%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.container .login .content {
+  background-color: #fceeee;
+  padding: 50px 0px;
+  border-radius: 18px;
+  width: 50%;
+  margin: auto;
+}
+.container .login .content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .login .content form input {
+  margin-bottom: 30px;
+  padding: 12px;
+  width: 70%;
+  background-color: #f9f9f9;
+  border: none;
+  color: #242323;
+  font-size: 15px;
+  font-weight: 850;
+}
+.container .login .content form button {
+  width: 73%;
+  border: 1px solid #f9f9f9;
+  color: #f9f9f9;
+  background-color: #09080d;
+  padding: 8px;
+  border-radius: 15px;
+  font-family: "Jost", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.container .login .content form button:hover {
+  border: 1px solid #272627;
+  background-color: #272627;
+}
+.container .login .content p {
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+}
+.container .login .content p a {
+  color: #484849;
+  font-weight: 900;
+}
+/* Start Media Query */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container .login {
+    width: 100%;
+    margin: 50px auto;
+  }
+  .container .login p {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .container .login .content {
+    padding: 50px 0px;
+    width: 90%;
+  }
+  .container .login .content form input {
+    width: 80%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .container .login {
+    width: 100%;
+    margin: 50px auto;
+  }
+  .container .login p {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .container .login .content {
+    padding: 50px 0px;
+    width: 80%;
+  }
+  .container .login .content form input {
+    width: 80%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .container .login {
+    width: 95%;
+    margin: 50px auto;
+  }
+  .container .login p {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .container .login .content {
+    padding: 50px 0px;
+    width: 75%;
+  }
+  .container .login .content form input {
+    width: 80%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container .login {
+    width: 90%;
+    margin: 50px auto;
+  }
+  .container .login p {
+    width: 65%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .container .login .content {
+    padding: 50px 0px;
+    width: 70%;
+  }
+  .container .login .content form input {
+    width: 80%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container .login {
+    width: 85%;
+    margin: 50px auto;
+  }
+  .container .login p {
+    width: 45%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .container .login .content {
+    padding: 50px 0px;
+    width: 50%;
+  }
+  .container .login .content form input {
+    width: 70%;
+  }
+}

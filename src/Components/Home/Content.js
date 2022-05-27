@@ -1,5 +1,5 @@
 import React from "react";
-import Projects from "./Projects";
+import Projects from "./ProjectsArea";
 import Sales from "./Sales";
 import Work from "./Work";
 const Content = () => {

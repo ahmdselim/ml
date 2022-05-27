@@ -1,20 +1,21 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useSelector } from "react-redux";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../firebase/config";
 import { Pagination } from "swiper";
-import avatar1 from "../images/avater1.jpg";
-import avatar2 from "../images/avater2.jpg";
-import avatar3 from "../images/avater3.jpg";
-import avatar4 from "../images/avater4.jpg";
-import avatar5 from "../images/avater5.jpg";
-import avatar6 from "../images/avater6.jpg";
 
 const Sales = () => {
+  const users = useSelector((state) => state.Reducer.users);
+  const [user] = useAuthState(auth);
+  const log =
+    user && users && users.filter((person) => person.data.uid !== user.uid);
+
   return (
     <div className="sales">
-      <h3>Top sales</h3>
+      <h3>Top Sellers</h3>
       <Swiper
         slidesPerView={1}
-        loop="true"
         spaceBetween={10}
         breakpoints={{
           "@0.00": {
@@ -37,42 +38,46 @@ const Sales = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div>
-            <img src={avatar1} alt="avater" className="avaterS" />
-            <span>@Ahmed</span>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <img src={avatar2} alt="avater" className="avaterS" />
-            <span>@Abdo</span>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <img src={avatar3} alt="avater" className="avaterS" />
-            <span>@Mohamed</span>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <img src={avatar4} alt="avater" className="avaterS" />
-            <span>@Saeed</span>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <img src={avatar5} alt="avater" className="avaterS" />
-            <span>@Hima</span>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <img src={avatar6} alt="avater" className="avaterS" />
-            <span>@Sayed</span>
-          </div>
-        </SwiperSlide>
+        {users && users
+          ? log
+            ? log.map((person, i) => (
+                <SwiperSlide key={i}>
+                  <div>
+                    <img
+                      src={person.data.image}
+                      alt="avater"
+                      className="avaterS"
+                    />
+                    <span>@{person.data.name}</span>
+                  </div>
+                </SwiperSlide>
+              ))
+            : users.map((person, i) => (
+                <SwiperSlide key={i}>
+                  <div>
+                    <img
+                      src={person.data.image}
+                      alt="avater"
+                      className="avaterS"
+                    />
+                    <span>@{person.data.name}</span>
+                  </div>
+                </SwiperSlide>
+              ))
+          : users
+          ? users.map((person, i) => (
+              <SwiperSlide key={i}>
+                <div>
+                  <img
+                    src={person.data.image}
+                    alt="avater"
+                    className="avaterS"
+                  />
+                  <span>@{person.data.name}</span>
+                </div>
+              </SwiperSlide>
+            ))
+          : "Not Found"}
       </Swiper>
     </div>
   );

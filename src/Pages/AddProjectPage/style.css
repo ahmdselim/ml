@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+.container .addProject {
+  width: 85%;
+  margin: auto;
+}
+.container .addProject .banner {
+  background-image: url("../../Components/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.container .addProject .banner h3 {
+  font-family: "Jost", sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.container .addProject .banner p {
+  font-family: "Jost", sans-serif;
+}
+.container .addProject .banner p span {
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.container .addProject .banner p a {
+  color: #fff;
+  font-weight: 850;
+  font-size: 16px;
+}
+.container .addProject .createProject {
+  width: 90%;
+  margin: auto;
+}
+.container .addProject .createProject h2 {
+  font-family: "Jost", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+.container .addProject .createProject form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #f9f9f9;
+  /* border: 1px solid #09080d; */
+  border-radius: 10px;
+  width: 90%;
+  margin: auto;
+}
+.container .addProject .createProject form input,
+.container .addProject .createProject form select {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 15px;
+  width: 70%;
+  font-size: 17px;
+  font-weight: 900;
+  color: #000;
+  background-color: #f9f9f9;
+  border: 1px solid #000;
+}
+.container .addProject .createProject form textarea {
+  padding: 20px;
+  width: 68%;
+  margin-top: 15px;
+  color: #09080d;
+  background-color: #f9f9f9;
+  border: 1px solid #09080d;
+  border-radius: 5px;
+  font-family: "Jost", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  resize: vertical;
+  height: 120px;
+}
+.container .addProject .createProject form ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+.container .addProject .createProject form ul li {
+  max-width: 49%;
+  flex-basis: 49%;
+  margin-right: 1%;
+}
+.container .addProject .createProject form button {
+  border: 1px solid #f9f9f9;
+  background-color: #09080d;
+  color: #f9f9f9;
+  border-radius: 10px;
+  font-family: "Jost", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  width: 70%;
+  margin: 40px auto;
+  padding: 8px;
+}
+.container .addProject .createProject form button:hover {
+  border: 1px solid #1c1b1d;
+  background-color: #1c1b1d;
+}
+/* Start Media Query */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container .addProject {
+    width: 90%;
+    margin: auto;
+  }
+  .container .addProject .createProject {
+    width: 100%;
+    margin: auto;
+  }
+  .container .addProject .createProject form {
+    width: 95%;
+    margin: auto;
+  }
+  .container .addProject .createProject form ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+  }
+  .container .addProject .createProject form ul li {
+    max-width: 100%;
+    flex-basis: 100%;
+    margin-right: 0%;
+  }
+  .container .addProject .createProject form input,
+  .container .addProject .createProject form select {
+    width: 80%;
+  }
+  .container .addProject .createProject form textarea {
+    width: 78%;
+    height: 80px;
+  }
+  .container .addProject .createProject form button {
+    width: 90%;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .container .addProject {
+    width: 95%;
+    margin: auto;
+  }
+  .container .addProject .createProject {
+    width: 100%;
+    margin: auto;
+  }
+  .container .addProject .createProject form {
+    width: 95%;
+    margin: auto;
+  }
+  .container .addProject .createProject form ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+  }
+  .container .addProject .createProject form ul li {
+    max-width: 45%;
+    flex-basis: 45%;
+    margin-right: 1%;
+  }
+  .container .addProject .createProject form input,
+  .container .addProject .createProject form select {
+    width: 80%;
+  }
+  .container .addProject .createProject form textarea {
+    width: 78%;
+    height: 120px;
+  }
+  .container .addProject .createProject form button {
+    width: 80%;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .container .addProject {
+    width: 90%;
+    margin: auto;
+  }
+  .container .addProject .createProject {
+    width: 85%;
+    margin: auto;
+  }
+  .container .addProject .createProject form {
+    width: 100%;
+    margin: auto;
+  }
+  .container .addProject .createProject form ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+  }
+  .container .addProject .createProject form ul li {
+    max-width: 49%;
+    flex-basis: 49%;
+    margin-right: 1%;
+  }
+  .container .addProject .createProject form input,
+  .container .addProject .createProject form select {
+    width: 80%;
+  }
+  .container .addProject .createProject form textarea {
+    width: 78%;
+    height: 120px;
+  }
+  .container .addProject .createProject form button {
+    width: 80%;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container .addProject {
+    width: 90%;
+    margin: auto;
+  }
+  .container .addProject .createProject {
+    width: 95%;
+    margin: auto;
+  }
+  .container .addProject .createProject form {
+    width: 90%;
+    margin: auto;
+  }
+  .container .addProject .createProject form ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+  }
+  .container .addProject .createProject form ul li {
+    max-width: 49%;
+    flex-basis: 49%;
+    margin-right: 1%;
+  }
+  .container .addProject .createProject form input,
+  .container .addProject .createProject form select {
+    width: 70%;
+  }
+  .container .addProject .createProject form textarea {
+    width: 68%;
+    height: 120px;
+  }
+  .container .addProject .createProject form button {
+    width: 70%;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container .addProject {
+    width: 85%;
+    margin: auto;
+  }
+  .container .addProject .createProject {
+    width: 90%;
+    margin: auto;
+  }
+  .container .addProject .createProject form {
+    width: 90%;
+    margin: auto;
+  }
+  .container .addProject .createProject form ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+  }
+  .container .addProject .createProject form ul li {
+    max-width: 49%;
+    flex-basis: 49%;
+    margin-right: 1%;
+  }
+  .container .addProject .createProject form input,
+  .container .addProject .createProject form select {
+    width: 70%;
+  }
+  .container .addProject .createProject form textarea {
+    width: 68%;
+    height: 120px;
+  }
+  .container .addProject .createProject form button {
+    width: 70%;
+  }
+}

@@ -1,0 +1,282 @@
+.container .navbarAdmin {
+  width: 90%;
+  /* margin: auto; */
+}
+.container .navbarAdmin .row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.container .navbarAdmin .row div.logoDiv {
+  max-width: 40%;
+  flex-basis: 40%;
+}
+.container .navbarAdmin .row div.userSetting {
+  max-width: 40%;
+  flex-basis: 40%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.container .navbarAdmin .row div img {
+  width: 40px;
+  border-radius: 30px;
+  vertical-align: middle;
+}
+/* start sidebar */
+.container .sidebar-admin {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  background-color: rgb(26, 22, 22);
+  color: #fff;
+  padding: 10px;
+}
+.container .sidebar-admin ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.container .sidebar-admin ul li {
+  margin-bottom: 25px;
+}
+.container .sidebar-admin ul li span {
+  margin-left: 10px;
+  vertical-align: top;
+}
+.container .sidebar-admin ul li a span {
+  color: #fff;
+}
+.container .sidebar-admin ul li a svg {
+  vertical-align: middle;
+  color: #fff;
+}
+/* End Sidebar */
+
+/* Start Content */
+.container .adminContent {
+  width: 80%;
+  margin: 50px auto;
+}
+.container .adminContent .row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.container .adminContent .row .contentTable {
+  max-width: 50%;
+  flex-basis: 50%;
+}
+.container .adminContent .row .contentTable .table {
+  --bs-table-bg: transparent;
+  --bs-table-striped-color: #212529;
+  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+  --bs-table-active-color: #212529;
+  --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+  --bs-table-hover-color: #212529;
+  --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  vertical-align: top;
+  border-color: #dee2e6;
+  caption-side: bottom;
+  border-collapse: collapse;
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+}
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+  padding: 10px;
+}
+.container .adminContent .row .contentTable .table thead {
+  vertical-align: bottom;
+  display: table-header-group;
+}
+.table th,
+.table thead th {
+  font-weight: 500;
+}
+.container .adminContent .row .contentShowUsers {
+  max-width: 50%;
+  flex-basis: 50%;
+}
+.container .adminContent .row .contentShowUsers ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+}
+.container .adminContent .row .contentShowUsers ul li img {
+  width: 30px;
+  border-radius: 25px;
+}
+.container .adminContent .row .contentShowUsers ul li p {
+  display: inline-block;
+  margin-right: 10px;
+}
+/* End Content */
+
+/* Start Media Query */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container .sidebar-admin {
+    width: 10%;
+  }
+  .container .sidebar-admin ul li span {
+    display: none;
+  }
+  .container .sidebar-admin ul {
+    margin-left: 35px;
+  }
+  /* start Content */
+  .container .adminContent .row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20%;
+  }
+  .container .adminContent .row .contentShowUsers {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  .container .adminContent .row .contentTable {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  /* End Content */
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .container .sidebar-admin {
+    width: 10%;
+  }
+  .container .sidebar-admin ul li span {
+    display: none;
+  }
+  .container .sidebar-admin ul {
+    margin-left: 35px;
+  }
+  /* start Content */
+  .container .adminContent .row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20%;
+  }
+  .container .adminContent .row .contentShowUsers {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  .container .adminContent .row .contentTable {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  /* End Content */
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .container .sidebar-admin {
+    width: 5%;
+  }
+  .container .sidebar-admin ul li span {
+    display: inline-block;
+  }
+  .container .sidebar-admin ul {
+    margin-left: 0px;
+  }
+  /* start Content */
+  .container .adminContent .row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+  }
+  .container .adminContent .row .contentShowUsers {
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .container .adminContent .row .contentTable {
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  /* End Content */
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container .sidebar-admin {
+    width: 10%;
+  }
+  .container .sidebar-admin ul {
+    margin-left: 0px;
+  }
+  .container .sidebar-admin ul li span {
+    display: inline-block;
+  }
+  /* start Content */
+  .container .adminContent .row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+  }
+  .container .adminContent .row .contentShowUsers {
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .container .adminContent .row .contentTable {
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  /* End Content */
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container .sidebar-admin {
+    width: 10%;
+  }
+  .container .sidebar-admin ul li span {
+    display: inline-block;
+  }
+  /* start Content */
+  .container .adminContent .row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 20%;
+  }
+  .container .adminContent .row .contentShowUsers {
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .container .adminContent .row .contentTable {
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  /* End Content */
+}

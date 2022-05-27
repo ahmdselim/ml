@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+.container .project {
+  max-width: 85%;
+  margin: 50px auto;
+}
+.container .project .banner {
+  background-image: url("../../Components/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.container .project .banner h3 {
+  font-family: "Jost", sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: #f9f9f9;
+}
+.container .project .banner p {
+  font-family: "Jost", sans-serif;
+}
+.container .project .banner p span {
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.container .project .banner p a {
+  color: #fff;
+  font-weight: 850;
+  font-size: 16px;
+}
+.container .project .content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container .project .content .pic {
+  max-width: 39%;
+  flex-basis: 39%;
+  margin-left: 1%;
+}
+.container .project .content .pic img {
+  width: 60%;
+  margin: auto;
+  border-radius: 8px;
+}
+.container .project .content .info {
+  max-width: 60%;
+  flex-basis: 60%;
+}
+.container .project .content .info h3 {
+  font-family: "Jost", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+}
+.container .project .content .info p {
+  width: 70%;
+  line-height: 1.7;
+  font-family: "Poppins", sans-serif;
+  color: #313131;
+  font-weight: 700;
+}
+.container .project .content .info strong,
+.container .project .content .info span {
+  font-family: "Jost", sans-serif;
+  /* font-weight: 700; */
+  font-size: 17px;
+}
+.container .project .content .info strong {
+  margin-left: 30px;
+  color: #19171b;
+}
+.container .project .content .info span {
+  color: #5f4141;
+  margin-left: 30px;
+}
+.container .project .content .info .projectInfo {
+  margin-top: 40px;
+}
+.container .project .content .info button {
+  width: 100%;
+  margin: 40px auto;
+  border: 1px solid #f9f9f9;
+  color: #f9f9f9;
+  background-color: #09080d;
+  padding: 8px;
+  border-radius: 15px;
+  font-family: "Jost", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.container .project .content .info button:hover {
+  border: 1 solid #19171b;
+  background-color: #19171b;
+}
+.container .project .content .info img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+/* Start Media Query */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container .project {
+    max-width: 90%;
+    margin: 50px auto;
+  }
+  .container .project .content .pic {
+    max-width: 100%;
+    flex-basis: 100%;
+    margin-left: 0%;
+  }
+  .container .project .content .info {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  .container .project .content .pic img {
+    width: 100%;
+    margin: auto;
+  }
+  .container .project .content .info p {
+    width: 100%;
+  }
+  .container .project .content .info button {
+    width: 100%;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .container .project {
+    max-width: 100%;
+    margin: 50px auto;
+  }
+  .container .project .content .pic {
+    max-width: 49%;
+    flex-basis: 49%;
+    margin-left: 1%;
+  }
+  .container .project .content .info {
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .container .project .content .pic img {
+    width: 95%;
+    margin: auto;
+  }
+  .container .project .content .info p {
+    width: 100%;
+  }
+  .container .project .content .info button {
+    width: 100%;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .container .project {
+    max-width: 90%;
+    margin: 50px auto;
+  }
+  .container .project .content .pic {
+    max-width: 49%;
+    flex-basis: 49%;
+    margin-left: 1%;
+  }
+  .container .project .content .info {
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .container .project .content .pic img {
+    width: 90%;
+    margin: auto;
+  }
+  .container .project .content .info p {
+    width: 90%;
+  }
+  .container .project .content .info button {
+    width: 80%;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container .project {
+    max-width: 90%;
+    margin: 50px auto;
+  }
+  .container .project .content .pic {
+    max-width: 49%;
+    flex-basis: 49%;
+    margin-left: 1%;
+  }
+  .container .project .content .info {
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .container .project .content .pic img {
+    width: 80%;
+    margin: auto;
+  }
+  .container .project .content .info p {
+    width: 80%;
+  }
+  .container .project .content .info button {
+    width: 70%;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container .project {
+    max-width: 95%;
+    margin: 50px auto;
+  }
+  .container .project .content .pic {
+    max-width: 39%;
+    flex-basis: 39%;
+    margin-left: 1%;
+  }
+  .container .project .content .info {
+    max-width: 60%;
+    flex-basis: 60%;
+  }
+  .container .project .content .pic img {
+    width: 60%;
+    margin: auto;
+  }
+  .container .project .content .info p {
+    width: 70%;
+  }
+  .container .project .content .info button {
+    width: 50%;
+  }
+}
