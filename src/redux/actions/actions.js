@@ -7,6 +7,8 @@ import {
   GET_CATEGORIES,
   ADD_PROJECT,
   ADD_CATEGORIES,
+  ADD_FEEDBACK,
+  GET_FEEDBACK,
 } from "./types";
 import {
   logInWithEmailAndPassword,
@@ -87,6 +89,20 @@ export const getCategories = async (dispatch) => {
   return dispatch({ type: GET_CATEGORIES, payload: categories });
 };
 
+// get Feedbacks
+const getFeedback = async () => {
+  let feedbacks = [];
+  const feedback = await getDocs(collection(db, "feedback"));
+  feedback.forEach((doc) => {
+    feedbacks.push({ id: doc.id, data: doc.data() });
+  });
+  return feedbacks;
+};
+export const getFeedbacks = async (dispatch) => {
+  const feedbacks = await getFeedback();
+  return dispatch({ type: GET_FEEDBACK, payload: feedbacks });
+};
+
 // add project
 const addProject = async (
   userID,
@@ -145,6 +161,28 @@ export const addProjects = async (
     projectPhoneNum
   );
   return dispatch({ type: ADD_PROJECT, payload: projects });
+};
+
+// add feedback
+const addFeedback = async (rate1, rate2, name, suggestion) => {
+  const project = await addDoc(collection(db, "feedback"), {
+    rate1,
+    rate2,
+    name,
+    suggestion,
+    date: new Date(),
+  });
+  return project;
+};
+export const addFeedbacks = async (
+  rate1,
+  rate2,
+  name,
+  suggestion,
+  dispatch
+) => {
+  const feedback = await addFeedback(rate1, rate2, name, suggestion);
+  return dispatch({ type: ADD_FEEDBACK, payload: feedback });
 };
 
 // add categories

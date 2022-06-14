@@ -10,17 +10,18 @@ const Projects = () => {
   const users = useSelector((state) => state.Reducer.users);
   const [search, setSearch] = useState("");
   const countries = [
-    "الظاهرة",
-    "ظفار",
-    "الوسطي",
-    "جنوب الشرقية",
-    "شمال الشرقية",
-    "جنوب الباطنه",
-    "شمال الباطنه",
-    "الداخلية",
-    "البريمي",
-    "مسقط",
-    "الكل",
+    "Ad Dhahirah",
+    "Dhofar",
+    "Ad Dakhiliyah",
+    "Ad Dakhiliyah",
+    "Al Batinah South",
+    "Al Batinah South",
+    "Al Wusta",
+    "Ash Sharqiyah North",
+    "Ash Sharqiyah South",
+    "Dhofar",
+    "Musandam",
+    "All",
   ];
 
   return (

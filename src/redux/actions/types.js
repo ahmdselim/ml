@@ -6,3 +6,5 @@ export const GET_PROJECTS = "GET_PROJECTS";
 export const GET_CATEGORIES = "GET_CATEGORIES";
 export const ADD_PROJECT = "ADD_PROJECT";
 export const ADD_CATEGORIES = "ADD_CATEGORIES";
+export const ADD_FEEDBACK = "ADD_FEEDBACK";
+export const GET_FEEDBACK = "GET_FEEDBACK";

@@ -48,6 +48,12 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
+            <Link to="/adminFeedbacks">
+              <BarChart className="sidebarIcon" />
+              <span>Feedbacks</span>
+            </Link>
+          </li>
+          <li>
             <Link to="/adminUsers">
               <PermIdentity className="sidebarIcon" />
               <span>Users</span>

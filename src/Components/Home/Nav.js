@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { IoLogIn, IoSearch, IoMenu, IoClose } from "react-icons/io5";
 import { Link } from "react-router-dom";
@@ -71,6 +70,9 @@ const Nav = () => {
               </li>
               <li>
                 <Link to="/projects">Projects</Link>
+              </li>
+              <li>
+                <Link to="/feedback">Feedback</Link>
               </li>
               {user && user ? (
                 <li>

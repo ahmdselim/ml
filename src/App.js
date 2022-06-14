@@ -11,9 +11,16 @@ import AdminUsersPage from "./Pages/Admin/AdminUsersPage/AdminUsersPage";
 import AdminProjectsPage from "./Pages/Admin/AdminProjectsPage/AdminProjectsPage";
 import AdminAddCategories from "./Pages/Admin/AdminAddCategories/AdminAddCategories";
 import AdminCategoriesPage from "./Pages/Admin/AdminCategoriesPage/AdminCategoriesPage";
-import { getUsers, getProjects, getCategories } from "./redux/actions/actions";
+import AdminFeedbacksPage from "./Pages/Admin/AdminFeedbacksPage/AdminFeedbacksPage";
+import {
+  getUsers,
+  getProjects,
+  getCategories,
+  getFeedbacks,
+} from "./redux/actions/actions";
 import { useDispatch } from "react-redux";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import FeedbackPage from "./Pages/FeedbackPage/FeedbackPage";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -21,6 +28,7 @@ const App = () => {
     getUsers(dispatch);
     getProjects(dispatch);
     getCategories(dispatch);
+    getFeedbacks(dispatch);
   }, [dispatch]);
   return (
     <>
@@ -33,11 +41,13 @@ const App = () => {
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/categories" element={<CategoriesPage />} />
           <Route path="/addProject" element={<AddProjectPage />} />
+          <Route path="/feedback" element={<FeedbackPage />} />
           <Route path="/admin" element={<AdminHomePage />} />
           <Route path="/adminUsers" element={<AdminUsersPage />} />
           <Route path="/adminProjects" element={<AdminProjectsPage />} />
           <Route path="/adminAddCategories" element={<AdminAddCategories />} />
           <Route path="/adminCategories" element={<AdminCategoriesPage />} />
+          <Route path="/adminFeedbacks" element={<AdminFeedbacksPage />} />
         </Routes>
       </Router>
     </>
