@@ -19,7 +19,6 @@ const Projects = () => {
     "Al Wusta",
     "Ash Sharqiyah North",
     "Ash Sharqiyah South",
-    "Dhofar",
     "Musandam",
     "All",
   ];
@@ -77,7 +76,7 @@ const Projects = () => {
                     onClick={(e) => setSearch(e.target.innerHTML)}
                   >
                     <div>
-                      <img src={project.data.projectImg} alt="project image" />
+                      <img src={project.data.projectImg} alt="project" />
                       <div className="project-info">
                         <strong>
                           {users &&

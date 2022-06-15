@@ -159,16 +159,16 @@ const AddProject = () => {
           </select>
           <select onChange={(e) => setProjectCountry(e.target.value)}>
             <option>choose country</option>
-            <option value="مسقط">مسقط</option>
-            <option value="ظفار">ظفار</option>
-            <option value="البريمي">البريمي</option>
-            <option value="الداخلية">الداخلية</option>
-            <option value="شمال الباطنه">شمال الباطنه</option>
-            <option value="جنوب الباطنه">جنوب الباطنه</option>
-            <option value="شمال الشرقية">شمال الشرقية</option>
-            <option value="جنوب الشرقية">جنوب الشرقية</option>
-            <option value="الظاهرة">الظاهرة</option>
-            <option value="الوسطي">الوسطي</option>
+            <option value="Ad Dhahirah">Ad Dhahirah</option>
+            <option value="Dhofar">Dhofar</option>
+            <option value="Ad Dakhiliyah">Ad Dakhiliyah</option>
+            <option value="Ad Dakhiliyah">Ad Dakhiliyah</option>
+            <option value="Al Batinah South">Al Batinah South</option>
+            <option value="Al Batinah South">Al Batinah South</option>
+            <option value="Al Wusta">Al Wusta</option>
+            <option value="Ash Sharqiyah North">Ash Sharqiyah North</option>
+            <option value="Ash Sharqiyah South">Ash Sharqiyah South</option>
+            <option value="Musandam">Musandam</option>
           </select>
           <ul>
             <li>
