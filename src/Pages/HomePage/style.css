@@ -357,6 +357,7 @@ a.addCart span {
   margin-left: 1%;
   flex-basis: 25%;
 }
+.container .work-area ul li img,
 .container .work-area ul li svg {
   color: #282c34 !important;
   width: 55px;

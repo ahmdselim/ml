@@ -5,6 +5,10 @@ import {
   IoBagOutline,
   IoTrendingUpOutline,
 } from "react-icons/io5";
+import icon1 from "../images/icon1.jpg";
+import icon2 from "../images/icon2.jpg";
+import icon3 from "../images/icon3.jpg";
+
 const Work = () => {
   return (
     <div className="work-area">
@@ -21,7 +25,7 @@ const Work = () => {
         </li>
 
         <li className="item">
-          <IoGridOutline />
+          <img src={icon2} alt="work" />
           <h3>Set up your wallet</h3>
           <p>
             Once you've set up your wallet of choice, connect it to OpenSea by
@@ -31,7 +35,7 @@ const Work = () => {
         </li>
 
         <li className="item">
-          <IoBagOutline />
+          <img src={icon3} alt="work" />
           <h3>Set up your wallet</h3>
           <p>
             Once you've set up your wallet of choice, connect it to OpenSea by
@@ -41,7 +45,7 @@ const Work = () => {
         </li>
 
         <li className="item">
-          <IoTrendingUpOutline />
+          <img src={icon1} alt="work" />
           <h3>Set up your wallet</h3>
           <p>
             Once you've set up your wallet of choice, connect it to OpenSea by
