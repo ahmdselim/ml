@@ -1,17 +1,11 @@
 import React, { useEffect } from "react";
 import {
   LineStyle,
-  Timeline,
-  TrendingUp,
   PermIdentity,
-  Storefront,
   AttachMoney,
   BarChart,
-  MailOutline,
   DynamicFeed,
-  ChatBubbleOutline,
   WorkOutline,
-  Report,
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import { auth } from "../../../firebase/config";
@@ -36,7 +30,7 @@ const Sidebar = () => {
           .filter((person) => person.data.uid === user.uid)
           .map((person) => (person.data.status === 0 ? navigate("/") : null));
     }
-  }, [user, loading, navigate]);
+  }, [user, loading, navigate, users]);
   return (
     <>
       <div className="sidebar-admin">
@@ -44,36 +38,36 @@ const Sidebar = () => {
           <li>
             <Link to="/admin">
               <DynamicFeed className="sidebarIcon" />
-              <span>Home</span>
+              <span>الرئيسية</span>
             </Link>
           </li>
           <li>
             <Link to="/adminFeedbacks">
               <BarChart className="sidebarIcon" />
-              <span>Feedbacks</span>
+              <span>التقييمات</span>
             </Link>
           </li>
           <li>
             <Link to="/adminUsers">
               <PermIdentity className="sidebarIcon" />
-              <span>Users</span>
+              <span>الأعضاء</span>
             </Link>
           </li>
           <li>
             <Link to="/adminProjects">
               <AttachMoney className="sidebarIcon" />
-              <span>Projects</span>
+              <span>المقالات</span>
             </Link>
           </li>
           <li>
             <Link to="/adminCategories">
               <WorkOutline className="sidebarIcon" />
-              <span>Categories</span>
+              <span>الأقسام</span>
             </Link>
           </li>
           <li>
             <Link to="/adminAddCategories">
-              <LineStyle className="sidebarIcon" /> <span>Add Category</span>
+              <LineStyle className="sidebarIcon" /> <span>إضافة قسم</span>
             </Link>
           </li>
         </ul>

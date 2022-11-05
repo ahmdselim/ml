@@ -9,9 +9,7 @@ const AdminHome = () => {
       <Head />
       <Sidebar />
       <Content />
-      <p style={{ textAlign: "center" }}>
-        &copy; 2022 B4 Sall, All Rights Reserved.
-      </p>
+      <p style={{ textAlign: "center" }}>&copy; 2022 , All Rights Reserved.</p>
     </div>
   );
 };

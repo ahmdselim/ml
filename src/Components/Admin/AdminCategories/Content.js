@@ -20,12 +20,12 @@ const Content = () => {
         className="contentTable"
         style={{ width: "100%", marginLeft: "50px" }}
       >
-        <h3>Categories</h3>
+        <h3>الأقسام</h3>
         <table className="table">
           <thead>
             <tr>
-              <th>Category Name</th>
-              <th>Delete</th>
+              <th>اسم القسم</th>
+              <th>مسح القسسم</th>
             </tr>
           </thead>
           <tbody>

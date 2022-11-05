@@ -41,7 +41,7 @@ const Content = () => {
           });
         }
       );
-      setError("Section has been added successfully 🎉");
+      setError("تم إضافة القسم بنجاح 🎉");
       setImageUpload(null);
       setCatName("");
     }
@@ -69,19 +69,19 @@ const Content = () => {
     <div className="adminContent">
       <div className="addProject">
         <div className="createProject">
-          <h2>Add new category</h2>
+          <h2>اضافة قسم جديد</h2>
           <form onSubmit={handleSubmit}>
             <input
               type="file"
-              placeholder="choose category image"
+              placeholder="صورة القسم"
               onChange={(e) => {
                 setImageUpload(e.target.files[0]);
               }}
             />
-            {progress && progress ? <> Uploading done {progress} %</> : null}
+            {progress && progress ? <> تم التحميل {progress} %</> : null}
             <input
               type="text"
-              placeholder="name of category"
+              placeholder="إسم القسم"
               onChange={(e) => setCatName(e.target.value)}
               value={catName}
             />
@@ -100,7 +100,7 @@ const Content = () => {
                 </strong>
               </>
             ) : null}
-            <button>Add Category</button>
+            <button>إضافة القسم</button>
           </form>
         </div>
       </div>

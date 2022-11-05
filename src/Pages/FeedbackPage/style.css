@@ -25,7 +25,7 @@ input[type="radio"] {
   resize: vertical;
   height: 110px;
   width: 30%;
-  font-family: "Jost", sans-serif;
+
   font-size: 15px;
   padding: 10px;
   border-radius: 2px;
@@ -35,7 +35,7 @@ input[type="radio"] {
   padding: 10px;
   width: 20%;
   margin-bottom: 20px;
-  font-family: "Jost", sans-serif;
+
   font-size: 15px;
   border: 1px solid #47b9ee;
   border-radius: 2px;

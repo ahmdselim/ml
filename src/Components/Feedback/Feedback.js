@@ -7,14 +7,12 @@ const Feedback = () => {
   return (
     <div className="feedbackPage">
       <img src={banner} alt="banner" />
-      <h2>Feedback</h2>
+      <h2>أضف تقييمك</h2>
       <p>
-        Dear Customer, <br />
-        Thank you for getting the services. We would like to know how we
-        performed. Please spare some moments to give us your valuable feedback
-        as it will help us in improving our service.
+        أهلا بك عزيزي الزائر, <br />
+        نتمي تضيف تقييمك وشكرا لانك فردا منا
       </p>
-      <h4>Please rate your service experience for the following parameters</h4>
+      <h4>يرجى تقييم تجربة الخدمة الخاصة بك للمعلمات التالية</h4>
       <ul>
         <li>
           <StarRating />

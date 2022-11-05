@@ -12,36 +12,32 @@ const Footer = () => {
             style={{ width: "35px", borderRadius: "25px" }}
             alt="logo"
           />
-          <p>
-            The largest platform for buying and selling projects in the
-            Sultanate of Oman. Our goal is to re-create opportunities for
-            entrepreneurs and business owners in the field of entrepreneurship
-            and provide them with the opportunity to invest and enter the world
-            of entrepreneurship and the prosperity of the economy in the
-            Sultanate.
-          </p>
+          <p></p>
         </div>
         <div>
-          <h3>About B4S</h3>
+          <h3>الصفحات</h3>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">الرئيسية</Link>
             </li>
             <li>
-              <Link to="/categories">Categories</Link>
+              <Link to="/projects">المقالات</Link>
             </li>
             <li>
-              <Link to="/projects">Projects</Link>
+              <Link to="/feedback">اضف تقييمك</Link>
             </li>
             <li>
-              <Link to="/addProject">New Ad</Link>
+              <Link to="/privacy"> سياسة الخصوصية</Link>
+            </li>
+            <li>
+              <Link to="/aboutUs"> ماذا عنا</Link>
             </li>
           </ul>
         </div>
       </div>
       <hr />
       <p style={{ textAlign: "center" }}>
-        &copy; 2022 B4 Sall, All Rights Reserved.
+        &copy; حقوق النشر 2022، جميع الحقوق محفوظة .
       </p>
     </section>
   );

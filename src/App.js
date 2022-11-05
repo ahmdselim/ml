@@ -21,6 +21,8 @@ import {
 import { useDispatch } from "react-redux";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import FeedbackPage from "./Pages/FeedbackPage/FeedbackPage";
+import AboutUsPage from "./Pages/aboutUsPage/AboutUsPage";
+import PrivacyPage from "./Pages/privacyPage/PrivacyPage";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -42,6 +44,9 @@ const App = () => {
           <Route path="/categories" element={<CategoriesPage />} />
           <Route path="/addProject" element={<AddProjectPage />} />
           <Route path="/feedback" element={<FeedbackPage />} />
+          <Route path="/aboutUs" element={<AboutUsPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+
           <Route path="/admin" element={<AdminHomePage />} />
           <Route path="/adminUsers" element={<AdminUsersPage />} />
           <Route path="/adminProjects" element={<AdminProjectsPage />} />

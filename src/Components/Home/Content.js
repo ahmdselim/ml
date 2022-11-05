@@ -1,13 +1,11 @@
 import React from "react";
 import Projects from "./ProjectsArea";
-import Sales from "./Sales";
-import Work from "./Work";
+import Comments from "./Comments";
 const Content = () => {
   return (
     <section>
+      <Comments />
       <Projects />
-      <Sales />
-      <Work />
     </section>
   );
 };

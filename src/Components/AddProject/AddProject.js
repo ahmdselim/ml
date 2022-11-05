@@ -15,37 +15,19 @@ const AddProject = () => {
   const [error, setError] = useState([]);
   const [imageUpload, setImageUpload] = useState(null);
   const [projectName, setProjectName] = useState("");
-  const [projectReason, setProjectReason] = useState("");
   const [projectDesc, setProjectDesc] = useState("");
   const [projectCat, setProjectCat] = useState("");
-  const [projectCountry, setProjectCountry] = useState("");
-  const [projectMonIncome, setProjectMonIncome] = useState();
-  const [projectNetIncome, setProjectNetIncome] = useState();
-  const [projectPrice, setProjectPrice] = useState();
-  const [projectPhoneNum, setProjectPhoneNum] = useState();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (imageUpload === null) {
-      setError("Please choose project image");
+      setError("اضف صورة للمقال");
     } else if (projectName.length === 0) {
-      setError("Please enter project name");
-    } else if (projectReason.length === 0) {
-      setError("Please enter your reason to sell");
-    } else if (projectDesc.length === 0) {
-      setError("Please enter project description");
+      setError("اضف اسم للمقال");
+    }else if (projectDesc.length === 0) {
+      setError("اضف المقال");
     } else if (projectCat.length === 0) {
-      setError("Please enter project categories");
-    } else if (projectCountry.length === 0) {
-      setError("Please enter project country");
-    } else if (projectMonIncome.length === 0) {
-      setError("Please enter monthly income of project");
-    } else if (projectNetIncome.length === 0) {
-      setError("Please enter net income of project");
-    } else if (projectPrice.length === 0) {
-      setError("Please enter project price");
-    } else if (projectPhoneNum.length === 0) {
-      setError("Please enter your number phone");
+      setError("اخار قسم للمقال");
     } else {
       const sotrageRef = ref(storage, `projects/${imageUpload.name}`);
       const uploadTask = uploadBytesResumable(sotrageRef, imageUpload);
@@ -64,32 +46,20 @@ const AddProject = () => {
               user.uid,
               downloadURL,
               projectName,
-              projectReason,
               projectDesc,
               projectCat,
-              projectCountry,
-              projectMonIncome,
-              projectNetIncome,
-              projectPrice,
-              projectPhoneNum,
               dispatch
             );
             getProjects(dispatch);
           });
         }
       );
-      setError("Advertisement posted successfully! 🎉");
+      setError("تم إضافة المقال بنجاح 🎉");
       getProjects(dispatch);
       setImageUpload(null);
       setProjectName("");
-      setProjectReason("");
       setProjectDesc("");
       setProjectCat("");
-      setProjectCountry("");
-      setProjectMonIncome("");
-      setProjectNetIncome("");
-      setProjectPrice("");
-      setProjectPhoneNum("");
     }
   };
 
@@ -104,28 +74,28 @@ const AddProject = () => {
   return (
     <div className="addProject">
       <div className="banner">
-        <h3 style={{ color: "#FFF" }}>Publish Ad</h3>
+        <h3 style={{ color: "#FFF" }}>إضافة مقال</h3>
         <p>
-          <Link to="/">Home</Link>
-          <span>></span>
-          <Link to="/projects">Projects</Link>
-          <span>></span>
+          <Link to="/">الرئيسية</Link>
+          <span>{" > "}</span>
+          <Link to="/projects">المقالات</Link>
+          <span>{" > "}</span>
           <span
             style={{
               fontWeight: "800",
               fontSize: "16px",
             }}
           >
-            New Ad
+            إضافة مقال
           </span>
         </p>
       </div>
       <div className="createProject">
-        <h2 style={{ direction: "rtl" }}>Add new project</h2>
+        <h2 style={{ direction: "rtl" }}>إضافة مقال جديد</h2>
         <form onSubmit={handleSubmit}>
           <input
             type="file"
-            placeholder="Choose the project image"
+            placeholder="اضف صورة للمقال"
             onChange={(e) => {
               setImageUpload(e.target.files[0]);
             }}
@@ -133,23 +103,17 @@ const AddProject = () => {
           {progress && progress ? <> loading {progress} %</> : null}
           <input
             type="text"
-            placeholder="Project Name"
+            placeholder="اسم المقال"
             onChange={(e) => setProjectName(e.target.value)}
-            value={projectName}
-          />
-          <input
-            type="text"
-            placeholder="reason sale"
-            onChange={(e) => setProjectReason(e.target.value)}
-            value={projectReason}
+            defaultValue={projectName}
           />
           <textarea
-            placeholder="description"
+            placeholder="المقال"
             onChange={(e) => setProjectDesc(e.target.value)}
-            value={projectDesc}
+            defaultValue={projectDesc}
           ></textarea>
           <select onChange={(e) => setProjectCat(e.target.value)}>
-            <option>Choose category</option>
+            <option>اختار القسم</option>
             {categories &&
               categories.map((category, i) => (
                 <option key={i} value={category.data.catName}>
@@ -157,53 +121,7 @@ const AddProject = () => {
                 </option>
               ))}
           </select>
-          <select onChange={(e) => setProjectCountry(e.target.value)}>
-            <option>choose country</option>
-            <option value="Ad Dhahirah">Ad Dhahirah</option>
-            <option value="Dhofar">Dhofar</option>
-            <option value="Ad Dakhiliyah">Ad Dakhiliyah</option>
-            <option value="Ad Dakhiliyah">Ad Dakhiliyah</option>
-            <option value="Al Batinah South">Al Batinah South</option>
-            <option value="Al Batinah South">Al Batinah South</option>
-            <option value="Al Wusta">Al Wusta</option>
-            <option value="Ash Sharqiyah North">Ash Sharqiyah North</option>
-            <option value="Ash Sharqiyah South">Ash Sharqiyah South</option>
-            <option value="Musandam">Musandam</option>
-          </select>
-          <ul>
-            <li>
-              <input
-                type="number"
-                placeholder="month income"
-                onChange={(e) => setProjectMonIncome(parseInt(e.target.value))}
-                value={projectMonIncome}
-              />
-            </li>
-            <li>
-              <input
-                type="number"
-                placeholder="year income"
-                onChange={(e) => setProjectNetIncome(parseInt(e.target.value))}
-                value={projectNetIncome}
-              />
-            </li>
-            <li>
-              <input
-                type="number"
-                placeholder="project price"
-                onChange={(e) => setProjectPrice(parseInt(e.target.value))}
-                value={projectPrice}
-              />
-            </li>
-            <li>
-              <input
-                type="number"
-                placeholder="phone number"
-                onChange={(e) => setProjectPhoneNum(parseInt(e.target.value))}
-                value={projectPhoneNum}
-              />
-            </li>
-          </ul>
+
           {error.length > 1 ? (
             <>
               <br />
@@ -219,7 +137,7 @@ const AddProject = () => {
               </strong>
             </>
           ) : null}
-          <button>Add Project</button>
+          <button>اضف المقال</button>
         </form>
       </div>
     </div>

@@ -1,10 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { auth } from "../../../firebase/config";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { makeAdmin, getUsers } from "../../../redux/actions/actions";
 const Content = () => {
-  const projects = useSelector((state) => state.Reducer.projects);
   const users = useSelector((state) => state.Reducer.users);
   const dispatch = useDispatch();
 
@@ -19,14 +16,14 @@ const Content = () => {
         className="contentTable"
         style={{ width: "100%", marginLeft: "50px" }}
       >
-        <h3>Users</h3>
+        <h3>الاعضاء</h3>
         <table className="table">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Status</th>
-              <th>Change Status</th>
+              <th>الاسم</th>
+              <th>البريد الالكتروني</th>
+              <th>الرتبة</th>
+              <th>تغيير الرتبة</th>
             </tr>
           </thead>
           <tbody>
@@ -40,7 +37,7 @@ const Content = () => {
                     <p>{person.data.email}</p>
                   </td>
                   <td>
-                    <p>{person.data.status === 1 ? "Admin" : "User"}</p>
+                    <p>{person.data.status === 1 ? "أدمن" : "مستخدم"}</p>
                   </td>
                   <td className="subtotal_users">
                     <div className="switch_box box_1">

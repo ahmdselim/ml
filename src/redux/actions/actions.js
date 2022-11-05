@@ -20,12 +20,9 @@ import {
   getDocs,
   collection,
   addDoc,
-  query,
-  where,
   doc,
   deleteDoc,
   updateDoc,
-  Firestore,
 } from "firebase/firestore";
 
 // create new user
@@ -108,27 +105,15 @@ const addProject = async (
   userID,
   projectImg,
   projectName,
-  projectReason,
   projectDesc,
-  projectCat,
-  projectCountry,
-  projectMonIncome,
-  projectNetIncome,
-  projectPrice,
-  projectPhoneNum
+  projectCat
 ) => {
   const project = await addDoc(collection(db, "project"), {
     userID,
     projectImg,
     projectName,
-    projectReason,
     projectDesc,
     projectCat,
-    projectCountry,
-    projectMonIncome,
-    projectNetIncome,
-    projectPrice,
-    projectPhoneNum,
     date: new Date(),
   });
   return project;
@@ -137,28 +122,16 @@ export const addProjects = async (
   userID,
   projectImg,
   projectName,
-  projectReason,
   projectDesc,
   projectCat,
-  projectCountry,
-  projectMonIncome,
-  projectNetIncome,
-  projectPrice,
-  projectPhoneNum,
   dispatch
 ) => {
   const projects = await addProject(
     userID,
     projectImg,
     projectName,
-    projectReason,
     projectDesc,
-    projectCat,
-    projectCountry,
-    projectMonIncome,
-    projectNetIncome,
-    projectPrice,
-    projectPhoneNum
+    projectCat
   );
   return dispatch({ type: ADD_PROJECT, payload: projects });
 };

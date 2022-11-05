@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import { useSelector } from "react-redux";
 import { IoCartOutline } from "react-icons/io5";
-import avatar1 from "../images/avater1.jpg";
+import read from "../images/read.png";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
@@ -14,7 +14,7 @@ const ProjectsArea = () => {
 
   return (
     <div className="projects">
-      <h3>Projects</h3>
+      <h3>المقالات</h3>
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
@@ -43,7 +43,7 @@ const ProjectsArea = () => {
           projects.map((project, i) => (
             <SwiperSlide key={i}>
               <div>
-                <img src={project.data.projectImg} alt="project image" />
+                <img src={project.data.projectImg} alt="project " />
                 <div className="project-info">
                   <strong>
                     {users &&
@@ -51,7 +51,7 @@ const ProjectsArea = () => {
                         .filter((user) => user.data.uid === project.data.userID)
                         .map((person) => person.data.name)}
                   </strong>
-                  <strong>{project.data.projectPrice} OMR</strong>
+                  <strong>أدمن</strong>
                 </div>
                 <h3>{project.data.projectName}</h3>
                 {users &&
@@ -74,12 +74,18 @@ const ProjectsArea = () => {
                       .map((person) => person.data.name)}
                 </span>
                 <br />
-                <br />
-                <span>{project.data.projectCountry}</span>
-                <br />
                 <Link to={`/project/${project.id}`} className="addCart">
-                  <IoCartOutline />
-                  <span>Open Ads</span>
+                  <img
+                    src={read}
+                    alt="read"
+                    style={{
+                      width: "30px",
+                      height: "30px",
+                      objectFit: "cover",
+                      verticalAlign: "bottom",
+                    }}
+                  />
+                  <span>قراءة </span>
                 </Link>
               </div>
             </SwiperSlide>

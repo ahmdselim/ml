@@ -15,16 +15,16 @@ const StarRating = () => {
   const handleClick = (e) => {
     e.preventDefault();
     if (rating1 === "") {
-      setError("Please Rate Experience");
+      setError("تجربتك الشاملة معنا؟");
     } else if (rating2 === "") {
-      setError("Please Rate Friendliness");
+      setError("مواضيع الموقع عن machine learning ؟");
     } else if (name === "") {
-      setError("Please Write Your Full Name");
+      setError("من فضلك أدخل اسمك");
     } else if (suggestion === "") {
-      setError("Please Write Your Suggestions");
+      setError("الرجاء كتابة اقتراحاتك");
     } else {
       addFeedbacks(rating1, rating2, name, suggestion, dispatch);
-      setError("Thanks For Your Feedback 😍");
+      setError("شكرا لملاحظاتك 😍");
       setRating1(0);
       setRating2(0);
       setName("");
@@ -35,7 +35,7 @@ const StarRating = () => {
   return (
     <>
       <div>
-        <p>1. Your overall experience with us ?</p>
+        <p>1. تجربتك الشاملة معنا؟</p>
         {[...Array(5)].map((star, i) => {
           const ratingValue = i + 1;
           return (
@@ -58,13 +58,10 @@ const StarRating = () => {
             </label>
           );
         })}
-        <p>the rating is: {rating1}</p>
+        <p>التقييم: {rating1}</p>
       </div>
       <div>
-        <p>
-          2. Friendliness and courtesy shown to you while receiving your vehicle
-          vehicle
-        </p>
+        <p>2. مواضيع الموقع عن machine learning ؟</p>
         {[...Array(5)].map((star, i) => {
           const ratingValue = i + 1;
           return (
@@ -87,19 +84,19 @@ const StarRating = () => {
             </label>
           );
         })}
-        <p>the rating is: {rating2}</p>
+        <p>التقييم : {rating2}</p>
       </div>
       <div>
-        <p> 3. Any Other suggestions:</p>
+        <p> 3. أية اقتراحات أخرى : </p>
         <input
           type="text"
-          placeholder="Your Name"
+          placeholder="ادخل اسمك"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
         <br />
         <textarea
-          placeholder="Please Write Your Suggestions"
+          placeholder="الرجاء كتابة اقتراحاتك"
           value={suggestion}
           onChange={(e) => setSuggestion(e.target.value)}
         ></textarea>
@@ -120,7 +117,7 @@ const StarRating = () => {
         ) : null}
       </div>
 
-      <button onClick={handleClick}>Submit your review</button>
+      <button onClick={handleClick}>إرسال رأيك</button>
     </>
   );
 };

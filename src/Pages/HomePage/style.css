@@ -14,6 +14,7 @@
 }
 html {
   scroll-behavior: smooth;
+  direction: rtl;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -95,7 +96,6 @@ input[type="checkbox"].switch_1:checked:after {
   width: 400px;
 }
 .openS h2 {
-  font-family: "Jost", sans-serif;
   font-size: 30px;
   margin-bottom: 0;
 }
@@ -240,13 +240,14 @@ a {
   width: 50%;
   line-height: 1.6;
   font-weight: bolder;
-  font-family: "Jost", sans-serif;
   margin-bottom: 0px;
 }
 .container .head .title p {
   color: #131316;
   font-size: 18px;
   margin-bottom: 50px;
+  width: 80%;
+  line-height: 30px;
 }
 .container .head .title a {
   margin-left: 30px;
@@ -268,6 +269,105 @@ a {
   margin-right: 10px;
 }
 /* End Head area */
+
+/* Start features area */
+
+.features {
+  margin: 50px auto;
+  width: 85%;
+}
+.features ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.features ul li {
+  max-width: 27%;
+  flex-basis: 27%;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.features ul li div.features_image {
+  margin-right: 10px;
+}
+.features ul li:hover {
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+/* End features area */
+
+/* Start benefits area */
+.benefits {
+  margin: 30px auto;
+  width: 85%;
+}
+.benefits .benefits_head {
+  width: 70%;
+}
+.benefits .benefits_head h2 {
+  font-size: 40px;
+  margin-bottom: 15.8px;
+  font-weight: bold;
+}
+.benefits .benefits_head p {
+  line-height: 27px;
+  color: #333;
+  font-weight: 700;
+}
+.benefits .benefits_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.benefits .benefits_content div {
+  max-width: 45%;
+  flex-basis: 45%;
+}
+.benefits .benefits_content ul {
+  max-width: 50%;
+  flex-basis: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.benefits .benefits_content ul li {
+  max-width: 45%;
+  flex-basis: 45%;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.benefits .benefits_content ul li img {
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+.benefits .benefits_content ul li:hover {
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+.benefits .benefits_content div img {
+  width: 80%;
+}
+/* End benefits area */
 
 /* Start Project area */
 a.addCart {
@@ -306,7 +406,7 @@ a.addCart span {
 }
 .mySwiper .swiper-wrapper .swiper-slide div {
   padding: 30px;
-  background-color: rgba(250, 248, 248, 0.5);
+  /* background-color: rgba(250, 248, 248, 0.5); */
   border-radius: 8px;
 }
 .mySwiper .swiper-wrapper .swiper-slide > div {
@@ -319,6 +419,8 @@ a.addCart span {
 }
 .mySwiper .swiper-wrapper .swiper-slide img {
   width: 100%;
+  height: 150px;
+  object-fit: cover;
   border-radius: 8px;
 }
 .mySwiper .swiper-wrapper .swiper-slide img.avater {
@@ -403,11 +505,12 @@ hr {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 .container .footer .content div ul li {
   margin-bottom: 10px;
+  margin-left: 20px;
 }
 .container .footer .content div ul li:last-of-type {
   margin-bottom: 0;
@@ -422,9 +525,179 @@ hr {
 }
 /* End Footer area */
 
+/* .comments */
+
+.container .comments {
+  background-image: url(" ../../Components/images/bg3.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  position: relative;
+  padding: 20px;
+  margin: 20px auto;
+}
+.container .comments::after {
+  content: "";
+  width: 300px;
+  height: 100%;
+  background-image: url("../../Components/images/shape.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.container .comments .commentsContainer {
+  width: 80%;
+  margin: auto;
+}
+.container .comments .commentsContainer .headComments h1 {
+  margin-bottom: 30px;
+  color: #fff;
+}
+.container .comments .commentsContainer .swiper {
+  padding: 20px;
+}
+.container .comments .commentsContainer .swiper .swiperSlide {
+  height: 200px;
+  width: 350px !important;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 20px 20px;
+  box-shadow: 2px 0em 1em rgb(0 0 0 / 10%);
+  background-color: #fff;
+  cursor: grab;
+}
+.container
+  .comments
+  .commentsContainer
+  .swiper
+  .swiperSlide
+  .swiperContent_comments {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.container
+  .comments
+  .commentsContainer
+  .swiper
+  .swiperSlide
+  .swiperContent_comments
+  li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.container
+  .comments
+  .commentsContainer
+  .swiper
+  .swiperSlide
+  .swiperContent_comments
+  li.liUp {
+  max-width: 80%;
+  flex-basis: 805;
+}
+.container
+  .comments
+  .commentsContainer
+  .swiper
+  .swiperSlide
+  .swiperContent_comments
+  li.liQuote {
+  max-width: 20%;
+  flex-basis: 20%;
+}
+.container
+  .comments
+  .commentsContainer
+  .swiper
+  .swiperSlide
+  .swiperContent_comments
+  li
+  img {
+  width: 80px;
+  object-fit: contain;
+  height: 80px;
+  vertical-align: middle;
+}
+.container
+  .comments
+  .commentsContainer
+  .swiper
+  .swiperSlide
+  .swiperContent_comments
+  li
+  h2 {
+  font-size: 20px;
+  /* width: 100%; */
+  color: #190a32;
+  font-weight: lighter;
+  position: relative;
+  left: 35%;
+}
+.container
+  .comments
+  .commentsContainer
+  .swiper
+  .swiperSlide
+  .swiperContent_comments
+  li
+  img.person {
+  border: 2px solid #419667;
+  border-radius: 50px;
+  object-fit: cover;
+  width: 80px;
+  height: 80px;
+  padding: 2px;
+  /* margin-left: 20px; */
+  position: relative;
+  left: 70px;
+}
+.container .comments .commentsContainer .swiper .swiperSlide .commentsContent {
+  margin-top: 10px;
+  padding: 0;
+  border: none;
+}
+.container
+  .comments
+  .commentsContainer
+  .swiper
+  .swiperSlide
+  .commentsContent
+  p {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #666666;
+}
+
 /* Start Media Query */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  /* Start benefits area */
+  .benefits .benefits_head {
+    width: 100%;
+  }
+  .benefits .benefits_content div {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  .benefits .benefits_content ul {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  .benefits .benefits_content ul li {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  .benefits .benefits_content div img {
+    width: 100%;
+  }
+  /* End benefits area */
+
   /* Start Head area */
   .container {
     width: 96%;
@@ -481,7 +754,6 @@ hr {
     width: 100%;
     line-height: 1.6;
     font-weight: bolder;
-    font-family: "Jost", sans-serif;
     margin-bottom: 0px;
   }
   .container .head .title a {
@@ -514,7 +786,6 @@ hr {
     width: 100%;
     line-height: 1.6;
     font-weight: bolder;
-    font-family: "Jost", sans-serif;
     margin-bottom: 0px;
   }
   .openS {
@@ -587,14 +858,42 @@ hr {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
   }
   /* End Footer area */
+
+  /* Start features area */
+  .features ul li {
+    max-width: 100%;
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+  /* Start features area */
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  /* Start benefits area */
+  .benefits .benefits_head {
+    width: 100%;
+  }
+  .benefits .benefits_content div {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  .benefits .benefits_content ul {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  .benefits .benefits_content ul li {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  .benefits .benefits_content div img {
+    width: 100%;
+  }
+  /* End benefits area */
   /* Start Head area */
   .container {
     width: 97%;
@@ -663,7 +962,7 @@ hr {
     width: 100%;
     line-height: 1.6;
     font-weight: bolder;
-    font-family: "Jost", sans-serif;
+
     margin-bottom: 0px;
   }
   .container .head .title a {
@@ -724,6 +1023,14 @@ hr {
   }
   /* End Work area */
 
+  /* Start features area */
+  .features ul li {
+    max-width: 100%;
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+  /* Start features area */
+
   /* Start Footer */
   .container .footer {
     width: 100%;
@@ -747,7 +1054,7 @@ hr {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
   }
   /* End Footer */
@@ -755,6 +1062,33 @@ hr {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  /* Start benefits area */
+  .benefits .benefits_head {
+    width: 70%;
+  }
+  .benefits .benefits_content div {
+    max-width: 45%;
+    flex-basis: 45%;
+  }
+  .benefits .benefits_content ul {
+    max-width: 40%;
+    flex-basis: 40%;
+  }
+  .benefits .benefits_content ul li {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  .benefits .benefits_content div img {
+    width: 100%;
+  }
+  /* End benefits area */
+  /* Start features area */
+  .features ul li {
+    max-width: 44%;
+    flex-basis: 44%;
+    margin-bottom: 20px;
+  }
+  /* Start features area */
   /* Start Head area */
   .container {
     width: 97%;
@@ -825,7 +1159,7 @@ hr {
     width: 100%;
     line-height: 1.6;
     font-weight: bolder;
-    font-family: "Jost", sans-serif;
+
     margin-bottom: 0px;
   }
   .container .head .title a {
@@ -907,7 +1241,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
   }
   /* End Footer */
@@ -915,6 +1249,33 @@ hr {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  /* Start benefits area */
+  .benefits .benefits_head {
+    width: 70%;
+  }
+  .benefits .benefits_content div {
+    max-width: 45%;
+    flex-basis: 45%;
+  }
+  .benefits .benefits_content ul {
+    max-width: 45%;
+    flex-basis: 45%;
+  }
+  .benefits .benefits_content ul li {
+    max-width: 40%;
+    flex-basis: 40%;
+  }
+  .benefits .benefits_content div img {
+    width: 80%;
+  }
+  /* End benefits area */
+
+  /* Start features area */
+  .features ul li {
+    max-width: 40%;
+    flex-basis: 40%;
+    margin-bottom: 20px;
+  }
   /* Start Head area */
   .container {
     width: 98%;
@@ -985,7 +1346,7 @@ hr {
     width: 100%;
     line-height: 1.6;
     font-weight: bolder;
-    font-family: "Jost", sans-serif;
+
     margin-bottom: 0px;
   }
   .container .head .title a {
@@ -1083,7 +1444,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
   }
   /* End Footer */
@@ -1091,6 +1452,31 @@ hr {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  /* Start benefits area */
+  .benefits .benefits_head {
+    width: 70%;
+  }
+  .benefits .benefits_content div {
+    max-width: 45%;
+    flex-basis: 45%;
+  }
+  .benefits .benefits_content ul {
+    max-width: 45%;
+    flex-basis: 45%;
+  }
+  .benefits .benefits_content ul li {
+    max-width: 40%;
+    flex-basis: 40%;
+  }
+  .benefits .benefits_content div img {
+    width: 80%;
+  }
+  /* Start features area */
+  .features ul li {
+    max-width: 27%;
+    flex-basis: 27%;
+    margin-bottom: 0px;
+  }
   /* Start Head area */
   .container {
     width: 100%;
@@ -1165,7 +1551,7 @@ hr {
     width: 100%;
     line-height: 1.6;
     font-weight: bolder;
-    font-family: "Jost", sans-serif;
+
     margin-bottom: 0px;
   }
   .container .head .title a {
@@ -1247,7 +1633,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
   }
   /* End Footer */

@@ -10,7 +10,7 @@ const Categories = () => {
   const categories = useSelector((state) => state.Reducer.categories);
   return (
     <div className="projects" style={{ direction: "rtl" }}>
-      <h3>Categories</h3>
+      <h3>الأقسام</h3>
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
@@ -39,7 +39,7 @@ const Categories = () => {
           categories.map((category, i) => (
             <SwiperSlide key={i}>
               <div>
-                <img src={category.data.catImg} alt="category image" />
+                <img src={category.data.catImg} alt="category " />
                 <div
                   className="project-info"
                   style={{ justifyContent: "center" }}

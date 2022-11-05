@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+#progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: #6f7aa1;
+  width: 0%;
+  border-radius: 10px;
+  transition: width 0.1s ease-in-out;
+}
 .container .project {
   max-width: 85%;
   margin: 50px auto;
@@ -13,14 +23,12 @@
   text-align: center;
 }
 .container .project .banner h3 {
-  font-family: "Jost", sans-serif;
   font-size: 45px;
   font-weight: 600;
   margin-bottom: 0;
   color: #f9f9f9;
 }
 .container .project .banner p {
-  font-family: "Jost", sans-serif;
 }
 .container .project .banner p span {
   font-size: 12px;
@@ -55,20 +63,18 @@
   flex-basis: 60%;
 }
 .container .project .content .info h3 {
-  font-family: "Jost", sans-serif;
   font-size: 40px;
   font-weight: 500;
 }
 .container .project .content .info p {
   width: 70%;
   line-height: 1.7;
-  font-family: "Poppins", sans-serif;
+
   color: #313131;
   font-weight: 700;
 }
 .container .project .content .info strong,
 .container .project .content .info span {
-  font-family: "Jost", sans-serif;
   /* font-weight: 700; */
   font-size: 17px;
 }
@@ -91,7 +97,7 @@
   background-color: #09080d;
   padding: 8px;
   border-radius: 15px;
-  font-family: "Jost", sans-serif;
+
   font-size: 18px;
   font-weight: 400;
   cursor: pointer;

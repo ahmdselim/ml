@@ -17,7 +17,7 @@ textarea,
 button,
 select {
   font-family: "Tajawal", sans-serif;
-  /* direction: rtl; */
+  direction: rtl;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

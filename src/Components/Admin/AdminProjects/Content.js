@@ -1,8 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { auth } from "../../../firebase/config";
 import { deleteProject, getProjects } from "../../../redux/actions/actions";
-import { useAuthState } from "react-firebase-hooks/auth";
 const Content = () => {
   const dispatch = useDispatch();
   const projects = useSelector((state) => state.Reducer.projects);
@@ -17,15 +15,13 @@ const Content = () => {
         className="contentTable"
         style={{ width: "100%", marginLeft: "50px" }}
       >
-        <h3>Projects</h3>
+        <h3>المقالات</h3>
         <table className="table">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Project Address</th>
-              <th>Project Price</th>
-              <th>Project Country</th>
-              <th>Delete</th>
+              <th>الكاتب</th>
+              <th>عنوان المقالة</th>
+              <th>مسح المقالة</th>
             </tr>
           </thead>
           <tbody>
@@ -44,12 +40,6 @@ const Content = () => {
                   </td>
                   <td>
                     <p>{project.data.projectName}</p>
-                  </td>
-                  <td>
-                    <p>{project.data.projectPrice} OMR</p>
-                  </td>
-                  <td>
-                    <p>{project.data.projectCountry}</p>
                   </td>
                   <td className="subtotal_users">
                     <div className="switch_box box_1">

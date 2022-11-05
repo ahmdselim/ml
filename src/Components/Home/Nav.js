@@ -11,7 +11,7 @@ const Nav = () => {
   const projects = useSelector((state) => state.Reducer.projects);
   const [search, setSearch] = useState("");
   const dispatch = useDispatch();
-  const [user, loading] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   const logout = async (id) => {
     logoutUser(dispatch);
   };
@@ -63,20 +63,23 @@ const Nav = () => {
                 onClick={() => setVisible(!visible)}
               />
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/">الرئيسية</Link>
               </li>
               <li>
-                <Link to="/categories">Categories</Link>
+                <Link to="/projects">المقالات</Link>
               </li>
               <li>
-                <Link to="/projects">Projects</Link>
+                <Link to="/feedback">اضف تقييمك</Link>
               </li>
               <li>
-                <Link to="/feedback">Feedback</Link>
+                <Link to="/privacy">سياسة الخصوصية</Link>
+              </li>
+              <li>
+                <Link to="/aboutUs">ماذا عنا</Link>
               </li>
               {user && user ? (
                 <li>
-                  <Link to="/addProject">New Ad</Link>
+                  <Link to="/addProject">إضافة مقال</Link>
                 </li>
               ) : null}
               {user &&
@@ -85,7 +88,7 @@ const Nav = () => {
                   person.data.uid === user.uid ? (
                     person.data.status === 1 ? (
                       <li key={i}>
-                        <Link to="/admin">Control Panel</Link>
+                        <Link to="/admin">لوحة التحكم</Link>
                       </li>
                     ) : null
                   ) : null
@@ -113,11 +116,11 @@ const Nav = () => {
                 }
                 onClick={() => setOpenS(!openS)}
               />
-              <h2>What are you looking for?</h2>
-              <p>We hope you find what you are looking for</p>
+              <h2>عن ماذا تبحث ؟ </h2>
+              <p>نأمل أن تجد ما تبحث عنه</p>
               <input
                 type="text"
-                placeholder="Search by name"
+                placeholder="بحث ...."
                 onChange={(e) => handleChange(e)}
               />
               {data.length > 0 ? (
@@ -171,8 +174,8 @@ const Nav = () => {
             </>
           ) : (
             <Link to="/login" style={{ marginRight: "10px" }}>
-              <span style={{ marginLeft: "10px" }}>Login</span>
               <IoLogIn />
+              <span style={{ marginLeft: "10px" }}>تسجيل دخول</span>
             </Link>
           )}
         </div>
